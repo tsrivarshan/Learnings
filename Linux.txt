@@ -1,0 +1,51 @@
+***Users,Groups and Others***
+
+ls -l {dir}
+
+user,group
+
+list the users --> cat /etc/passwd
+
+1.useradd - add a new user
+2.groupadd -add a user to new group
+3.chmod -giving access to user,group and other
+4.sudo - superuserdo (Gives permission what root user do)
+5.su- switch user
+6.su root vs sudo su - (su root switch to root but needs root passowrd but in sudo su - requires your user password)
+7.chown (Owner and group permission)
+8.whoami (Check current user)
+
+*** Directories***
+
+1.pwd -present working dir
+2.cd -change directory
+3.cd paths(Absolute and Relative path)[/home/sri/doc/linux || when you are in doc folder then /linux is relative path]
+4.cd .. (Previous dir)
+5.cd - [last viewed dir]
+6.cd ~ [Home dir]
+7.ls (List the things)
+8.ls -R(recursive sub dirs) -l(Brief) -t(Ascending) -r(Reverse-> latest) -a (hidden)
+9.mkdir [option] directory_name (Making a dir)
+10.mkdir -p {dir} (Create parent dir too)
+11.rmdir -p mydir/personal1(Removing dir)
+12.locate {filename}(find a file in directory but is is based localdb recent files may missed to update)
+13.find {dir} -iname file.txt(Finds a file -iname is name of the file with non-case sensitive) [You can also find based o name,dir,size,permissions]
+14.du (Dir size) -h(human readable) -s(total dir size) 
+
+
+**file editors**
+ 
+1.cat file.txt (Just a concatenation of file)
+2.tac file.txt (Cat in reverese order)
+
+***Basic working ***
+
+1.cp filename.txt /home/username/Documents(copy to other folder)
+2.cp -R /home/username/Documents /home/username/Documents_backup(-R recursive copy a whole folder to other)
+3.rm file.txt(Removes a file)
+4.rm -R file.txt(Remove a dir) [-R recursive] [-f force remove without ack]
+5.mv filename.txt /home/username/Documents (Moving a file) || [Rename]
+6.touch file.txt (Create an empty file)
+7.grep command (Check for matching substring) -i(non-case sensitive) -R (Recursive)
+8.head -n colors.txt(Head the logs) -n (First n lines)
+9.tail -n colors.txt(Tail the logs) -f (follow logs)

@@ -1,0 +1,8 @@
+Git
+
+Git is an Source code management
+
+Workflow
+
+*** Local file (git add) --> Staging Area (git commit)--> Commit the file (git push)--> Remote repository ***
+
