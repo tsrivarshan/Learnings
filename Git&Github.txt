@@ -27,6 +27,8 @@ Internally, "origin" is set as the remote repository link when you clone a Git r
 1.git branch {branch_name} (Create a branch)
 2.git checkout {branch name}(Pointing head to that new branch)
 3.git checkout -b {branch name}(Create and point)[preffered]
+4.git branch -d {branch name}(delete in local)
+5.git push origin {branch name} --delete(Delete in remote)
 
 These checkout makes a exact copy from base branch where you checked out
 
@@ -34,3 +36,35 @@ When you use this feature branches
 ==>When new need to added ,modified or deleted
 ==>checkout a new feature branch 
 ==>made the changes and merge to base branch
+
+
+Merging the branches
+
+==> Commit the changes in feature branch and checkout to base branch and git merge feature.It merge the things ,Then push to remote
+==> Commit the changes in feature branch and push the feature branch to remote raise PR and merge to Base branch(Preffered)
+
+Merging conflicts
+
+1.A and B pulls the remote changes parellelly
+2.A commit the changes in file1.txt and merge the changes
+3.B commit the his changes in file1.txt and try to merge with base branch
+4.There occurs a merge conflicts
+5.Need to fix the conflict ,commit and merge
+
+Out-of-Sync
+
+Same scenario here also but with other files so it won't conflict
+1.git checkout base branch
+2.git pull origin base
+3.git checkout feature
+4.git merge base
+
+In the above we are pulling the latest base branch and merge out to feature so it will fast forward
+
+Fetch vs pull
+
+1.git fetch origin branch_name
+this will fetch the remote branch but not merge to our local
+
+2.git pull origin branch_name (Fetch and merge)
+this will fetch the remote branch and merge to local 
