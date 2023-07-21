@@ -21,3 +21,16 @@ Workflow
 Internally, "origin" is set as the remote repository link when you clone a Git repository. (git remote -v)
 
 6.git log (Checking logs of previous commits) --oneline --author --since --until
+
+*****Git branches******
+
+1.git branch {branch_name} (Create a branch)
+2.git checkout {branch name}(Pointing head to that new branch)
+3.git checkout -b {branch name}(Create and point)[preffered]
+
+These checkout makes a exact copy from base branch where you checked out
+
+When you use this feature branches
+==>When new need to added ,modified or deleted
+==>checkout a new feature branch 
+==>made the changes and merge to base branch
