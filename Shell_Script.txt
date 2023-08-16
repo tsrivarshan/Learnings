@@ -1,0 +1,105 @@
+#!/bin/bash -->shebang line for telling your OS that it is an script
+read -p "Enter name?" {variable name} --> Read an input with prompt as p param
+
+#!/bin/sh
+# Author : Zara Ali
+# Copyright (c) Tutorialspoint.com
+# Script follows here
+
+Basic structure for be in formal way
+
+Variables
+
+Readonly-->Can't edit
+unset -->Delete the value
+
+1.local --> Specific to session [var=value]
+2.Environment --> Global to scripts [export var=val]
+3.Shell variables --> $? ,$$,$0
+
+$0 -->File name ,$$ --> PID $? -->Last cmd status 
+
+Arrays.
+
+a=(1 2 3 4 5)
+a[index]
+for i in ${a[*]}; do echo $i; done
+
+
+Conditions :
+
+if expr to arithmetic operations (`expr $a + $b`)
+Relational Operators --> -eq,-ne,-lt,-gt,-ge,-le
+Logical AND OR and NOT operator --> -a || -o || !
+-z and -nz specifies zero and nonzero of string
+File Test operators--> -e for existing -d for directory
+
+Example :
+
+a=10
+b=20
+c=8
+
+if [ $a -gt $b -a $a -gt $c ]
+then
+echo "A is bigger"
+else
+echo "A is not biggest"
+fi
+
+Syntax : 
+if...fi statement
+if...else...fi statement
+if...elif...else...fi statement
+
+
+CASE statements
+
+case word in
+   pattern1)
+      Statement(s) to be executed if pattern1 matches
+      ;;
+   pattern2)
+      Statement(s) to be executed if pattern2 matches
+      ;;
+   pattern3)
+      Statement(s) to be executed if pattern3 matches
+      ;;
+   *)
+     Default condition to be executed
+     ;;
+esac
+
+LOOPS:
+
+The while loop
+The for loop
+The until loop
+The select loop
+
+** WHILE **
+
+while read -r line
+do
+echo $line
+done< input.txt
+
+The break statement
+The continue statement
+The above two were basics in coding like other langs
+
+
+** FOR **
+
+for i in ${a[@]}
+do
+echo $i;
+done
+
+Error Handlings
+
+>: Redirects stdout, overwriting the file if it exists.
+>>: Redirects stdout, appending to the file if it exists.
+2>&1: Redirects stderr to the same location as stdout.
+
+Example : ./test.sh > sample.log 2>&1

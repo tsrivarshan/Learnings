@@ -31,7 +31,10 @@ list the users --> cat /etc/passwd
 12.locate {filename}(find a file in directory but is is based localdb recent files may missed to update)
 13.find {dir} -iname file.txt(Finds a file -iname is name of the file with non-case sensitive) [You can also find based o name,dir,size,permissions]
 14.du (Dir size) -h(human readable) -s(total dir size) 
-
+15.tar (Tar a file) -c create -x extract -f file -t list -u add to existing
+16.zip archive.zip file1.txt file2.txt file3.txt (Zipping a file)
+17.unzip -l archive.zip(List the files)
+18.unzip example.zip -d destination
 
 **file editors**
  
@@ -49,3 +52,20 @@ list the users --> cat /etc/passwd
 7.grep command (Check for matching substring) -i(non-case sensitive) -R (Recursive)
 8.head -n colors.txt(Head the logs) -n (First n lines)
 9.tail -n colors.txt(Tail the logs) -f (follow logs)
+
+**Need Networking related stuffs and Processes(SICKILL,PID,PS and thread things) 
+
+VI editor
+
+Two modes : Command mode(Esc) and Insert mode(i)
+
+I-Insert a text
+wq! - Store the file with changes
+q! - Save file without changes
+<n>dd - delete
+<n>yy - copy
+p- Paste
+G- Go to last lines
+H,L for left and right
+J,K for up and down
+Using sed command in VI editor : 1,$ (Range) sed s////  --> {1,3 s/f/h/g}

@@ -34,3 +34,6 @@ When you use this feature branches
 ==>When new need to added ,modified or deleted
 ==>checkout a new feature branch 
 ==>made the changes and merge to base branch
+
+
+**Need to check scenarios (git reset,rebase,revert and cherrypick these things)
